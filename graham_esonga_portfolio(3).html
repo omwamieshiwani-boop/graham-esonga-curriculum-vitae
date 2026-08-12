@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Graham Esonga Eshiwani — Procurement, Supply Chain, Contract Management and Supplier Performance professional.">
+<meta name="theme-color" content="#0b0b0b">
+<title>Graham Esonga Eshiwani | Supply Chain & Procurement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0a; --panel:#121212; --panel2:#181818; --ivory:#f5f1e8;
+  --muted:#a8a49b; --gold:#d6b46a; --orange:#c66a32; --line:rgba(255,255,255,.10);
+  --soft:#0f0f0f; --shadow:rgba(0,0,0,.45);
+  --max:1180px; --radius:24px;
+}
+body.light{
+  --black:#f4f1e9; --panel:#ffffff; --panel2:#ece8df; --ivory:#161616;
+  --muted:#68645c; --gold:#9b762d; --orange:#a94f20; --line:rgba(20,20,20,.12);
+  --soft:#f7f5ef; --shadow:rgba(40,35,25,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--black);color:var(--ivory);line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:100;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:.3s}
+.nav.scrolled{background:rgba(10,10,10,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Manrope;font-weight:800;letter-spacing:-.04em;font-size:20px}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:25px;font-size:13px;color:#d0ccc3}.navlinks a:hover{color:var(--gold)}
+.nav-cta{border:1px solid rgba(214,180,106,.5);padding:9px 15px;border-radius:100px;color:var(--gold);font-size:13px}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;position:relative}
+.hero:before{content:"";position:absolute;width:600px;height:600px;right:-250px;top:80px;background:radial-gradient(circle,rgba(198,106,50,.20),transparent 68%);filter:blur(20px)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:700;margin-bottom:25px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--orange);box-shadow:0 0 18px var(--orange)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
+h1{font-family:Manrope;font-size:clamp(54px,7.5vw,104px);line-height:.92;letter-spacing:-.075em;max-width:850px}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-copy{font-size:18px;color:#bdb8ae;max-width:650px;margin:30px 0}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 19px;border-radius:100px;border:1px solid var(--line);font-weight:700;font-size:13px;transition:.25s}
+.btn.primary{background:var(--ivory);color:#111;border-color:var(--ivory)}.btn.primary:hover{transform:translateY(-3px)}
+.btn.secondary{color:var(--ivory)}.btn.secondary:hover{border-color:var(--gold);color:var(--gold)}
+.profile-card{background:linear-gradient(145deg,var(--panel2),var(--soft));border:1px solid var(--line);border-radius:32px;padding:22px;transform:rotate(2deg);box-shadow:0 35px 90px var(--shadow)}
+.profile-art{height:480px;border-radius:22px;background:linear-gradient(160deg,#302d27,var(--soft));position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.profile-art:before{content:"G";position:absolute;font-family:Manrope;font-size:390px;font-weight:800;color:rgba(214,180,106,.08);right:-25px;top:-80px}
+.profile-label{position:absolute;left:22px;top:22px;background:color-mix(in srgb, var(--black) 72%, transparent);backdrop-filter:blur(12px);padding:9px 13px;border-radius:100px;font-size:11px;color:var(--gold);border:1px solid rgba(214,180,106,.2)}
+.profile-bottom{position:absolute;bottom:22px;left:22px;right:22px;padding:20px;border-radius:20px;background:color-mix(in srgb, var(--black) 78%, transparent);backdrop-filter:blur(15px);border:1px solid var(--line)}
+.profile-bottom strong{display:block;font-family:Manrope;font-size:20px}.profile-bottom small{color:var(--muted)}
+.section{padding:115px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:30px;margin-bottom:50px;align-items:end}
+.kicker{color:var(--orange);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;margin-bottom:12px}
+h2{font-family:Manrope;font-size:clamp(38px,5vw,65px);line-height:1;letter-spacing:-.055em}
+.lead{max-width:510px;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.about-text{font-size:20px;color:#d3cec5}.about-text p+p{margin-top:20px}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.skill{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:18px;min-height:150px;transition:.3s}
+.skill:hover{transform:translateY(-5px);border-color:rgba(214,180,106,.45)}
+.skill-num{color:var(--gold);font-size:11px;font-weight:800}.skill h3{font-family:Manrope;font-size:17px;margin:22px 0 7px}.skill p{font-size:13px;color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.metric{padding:35px;background:linear-gradient(145deg,var(--panel2),var(--soft));border:1px solid var(--line);border-radius:22px;position:relative;overflow:hidden}
+.metric:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-70px;bottom:-70px;background:rgba(214,180,106,.10)}
+.metric strong{font-family:Manrope;font-size:clamp(42px,5vw,66px);letter-spacing:-.06em;display:block;color:var(--ivory)}.metric span{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.metric p{color:var(--muted);font-size:13px;margin-top:8px}
+.timeline{position:relative;margin-left:12px}.timeline:before{content:"";position:absolute;left:7px;top:0;bottom:0;width:1px;background:var(--line)}
+.job{position:relative;padding:0 0 55px 42px}.job:last-child{padding-bottom:0}
+.job:before{content:"";position:absolute;left:0;top:8px;width:15px;height:15px;border-radius:50%;background:var(--black);border:2px solid var(--gold);box-shadow:0 0 0 5px rgba(214,180,106,.08)}
+.job-top{display:flex;justify-content:space-between;gap:20px}.job h3{font-family:Manrope;font-size:25px}.job-company{color:var(--gold);font-weight:700}.date{color:var(--muted);font-size:12px;white-space:nowrap}
+.job ul{margin-top:15px;padding-left:18px;color:var(--muted);font-size:14px}.job li{margin:5px 0}
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.case{min-height:290px;border-radius:25px;border:1px solid var(--line);padding:28px;background:linear-gradient(140deg,#1b1b1b,#0f0f0f);display:flex;flex-direction:column;justify-content:space-between;transition:.35s;position:relative;overflow:hidden}
+.case:hover{transform:translateY(-6px);border-color:rgba(214,180,106,.45)}.case:before{content:"";position:absolute;width:240px;height:240px;right:-100px;top:-100px;border-radius:50%;background:rgba(198,106,50,.08)}
+.case-tag{color:var(--orange);font-size:11px;text-transform:uppercase;letter-spacing:.15em;font-weight:800}.case h3{font-family:Manrope;font-size:27px;max-width:430px}.case p{color:var(--muted);font-size:14px;max-width:500px}
+.sustain{display:grid;grid-template-columns:1fr 1fr;gap:15px}.sustain-card{min-height:380px;border-radius:26px;border:1px solid var(--line);padding:35px;position:relative;overflow:hidden;background:linear-gradient(145deg,#1b1a17,#101010)}
+.sustain-card:first-child{background:linear-gradient(145deg,#182018,#0e110e)}
+.sustain-card h3{font-family:Manrope;font-size:38px;line-height:1;margin:20px 0}.sustain-card p{color:var(--muted);max-width:480px}.big-tree{position:absolute;right:-30px;bottom:-75px;font-size:220px;opacity:.08}
+.education{display:grid;grid-template-columns:1fr 1fr;gap:15px}.edu{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:20px}.edu small{color:var(--gold);text-transform:uppercase;letter-spacing:.12em}.edu h3{font-family:Manrope;font-size:22px;margin:10px 0}.edu p{color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:10px}.tool{padding:11px 15px;border:1px solid var(--line);border-radius:100px;color:#cbc6bc;font-size:13px;background:var(--panel)}
+.leadership{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.lead-card{padding:25px;border-left:2px solid var(--gold);background:var(--panel)}.lead-card h3{font-family:Manrope;font-size:18px}.lead-card p{font-size:13px;color:var(--muted);margin-top:8px}
+.contact{padding:130px 0;text-align:center;position:relative;overflow:hidden}.contact:before{content:"";position:absolute;width:700px;height:300px;left:50%;top:40px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(214,180,106,.14),transparent 68%);pointer-events:none}.contact h2{font-size:clamp(50px,8vw,100px);position:relative}.contact p{color:var(--muted);max-width:600px;margin:25px auto 30px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+#topBtn{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:white;z-index:40;display:none;cursor:pointer}
+
+.theme-toggle{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--panel);color:var(--ivory);padding:9px 13px;border-radius:100px;cursor:pointer;font-size:12px;transition:.25s}
+.theme-toggle:hover{border-color:var(--gold);color:var(--gold)}
+.theme-icon{font-size:14px}
+.hero-image{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:22px;filter:saturate(.8) contrast(1.05)}
+.profile-art.has-image:before{display:none}
+.photo-credit{position:absolute;right:22px;top:22px;font-size:9px;color:#eee;background:rgba(0,0,0,.42);padding:6px 9px;border-radius:100px;backdrop-filter:blur(8px)}
+.visual-strip{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;margin-top:15px}
+.visual{height:260px;border-radius:22px;overflow:hidden;border:1px solid var(--line);position:relative;background:var(--panel)}
+.visual img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.visual:hover img{transform:scale(1.05)}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.55));pointer-events:none}
+.visual-label{position:absolute;z-index:2;left:18px;bottom:16px;font-family:Manrope;font-weight:700;font-size:14px}
+.role-count{display:inline-flex;margin-left:12px;padding:5px 9px;border:1px solid var(--line);border-radius:100px;color:var(--gold);font-size:11px;vertical-align:middle}
+@media(max-width:700px){.visual-strip{grid-template-columns:1fr}.visual{height:220px}}
+
+@media(max-width:900px){
+ .navlinks,.nav-cta{display:none}.theme-toggle{display:inline-flex;margin-left:auto;margin-right:8px}.menu{display:block}.hero-grid,.about-grid,.sustain,.education{grid-template-columns:1fr}.profile-card{max-width:520px;margin:auto}.profile-art{height:420px}
+ .skill-grid,.leadership{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:1fr 1fr}.case-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ .container{width:min(var(--max),calc(100% - 28px))}.hero{padding-top:120px}.hero-copy{font-size:16px}.profile-art{height:370px}
+ .skill-grid,.metrics,.leadership{grid-template-columns:1fr}.section{padding:80px 0}.section-head{display:block}.lead{margin-top:18px}.job-top{display:block}.date{display:block;margin-top:5px}.footer-inner{display:block}.footer-inner span+span{display:block;margin-top:8px}
+}
+
+.role-summary{color:var(--gold);font-size:13px;line-height:1.6;margin:14px 0 4px;font-weight:600}
+.internal-note{display:inline-block;margin-top:18px;padding:6px 10px;border:1px solid var(--line);border-radius:100px;color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.referee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.referee{border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:25px;box-shadow:0 15px 40px var(--shadow)}
+.referee h3{font-family:Manrope;font-size:20px;margin:0 0 8px}
+.referee .ref-role{color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.referee a{color:var(--ivory);text-decoration:none;display:block;margin-top:8px;word-break:break-word}
+.referee a:hover{color:var(--gold)}
+@media(max-width:900px){.referee-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.referee-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#home">GRAHAM<span>.</span></a>
+    <div class="navlinks">
+      <a href="#about">Profile</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#referees">Referees</a><a href="#contact">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch theme"><span class="theme-icon">☾</span><span class="theme-text">Light</span></button>
+    <a class="nav-cta" href="mailto:grahamesonga1@gmail.com">Let's Talk ↗</a>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+ <div class="container hero-grid">
+  <div class="reveal">
+    <div class="eyebrow"><span class="dot"></span> Procurement · Supply Chain · Contract Management</div>
+    <h1>Building <em>better</em> supply chains.</h1>
+    <p class="hero-copy">I am a results-driven Procurement, Supply Chain and Logistics professional focused on contract lifecycle management, supplier performance, governance, analytics and operational value creation.</p>
+    <div class="actions">
+      <a class="btn primary" href="#experience">Explore my journey ↓</a>
+      <a class="btn secondary" href="mailto:grahamesonga1@gmail.com">Get in touch ↗</a>
+    </div>
+  </div>
+  <div class="profile-card reveal">
+    <div class="profile-art has-image">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1586528116493-da8b3f8c2c7a?auto=format&fit=crop&w=1000&q=85" alt="Modern logistics warehouse and supply chain operations">
+      <div class="profile-label">NAIROBI · KENYA</div>
+      <div class="photo-credit">Supply Chain Visual</div>
+      <div class="profile-bottom"><strong>Graham Esonga Eshiwani</strong><small>Supply Chain Analyst · Procurement Professional</small></div>
+    </div>
+  </div>
+ </div>
+</header>
+
+<section class="section" id="about">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">01 / Profile</div><h2>Commercial thinking.<br>Operational discipline.</h2></div><p class="lead">A results-driven Procurement, Supply Chain and Logistics professional with hands-on experience across telecom, FMCG, public-sector and energy industries.</p></div>
+  <div class="about-grid">
+   <div class="about-text reveal">
+    <p>Results-driven Procurement, Supply Chain and Logistics professional with hands-on experience across telecom, FMCG, public-sector and energy environments. My work combines strategic sourcing, contract lifecycle management, inventory and ministore operations, logistics planning, supplier engagement, compliance, customer service and data-driven reporting.</p>
+    <p>I am resilient, ethically grounded and performance-oriented, with a consistent focus on OTIF delivery, cost reduction, audit readiness, service quality and operational continuity. I work across finance, legal, technology, procurement, suppliers and other stakeholder groups.</p>
+    <p>My analytical toolkit includes Excel dashboards, PivotTables, Power Query and VBA, alongside SAP, Oracle, Power BI and PowerPoint for KPI tracking, performance analysis and executive reporting.</p>
+   </div>
+   <div class="skill-grid reveal">
+    <div class="skill"><span class="skill-num">01</span><h3>Strategic Sourcing Execution</h3><p>Led sourcing from need identification through supplier engagement, including EOI, RFQ and RFP issuance.</p></div>
+    <div class="skill"><span class="skill-num">02</span><h3>Stakeholder Management</h3><p>Worked with finance, legal, technology, procurement and vendors to coordinate procurement, contract approvals and logistics.</p></div>
+    <div class="skill"><span class="skill-num">03</span><h3>Customer Service Excellence</h3><p>Proactive communication, fast service delivery, query management, issue resolution and a customer-first mindset.</p></div>
+    <div class="skill"><span class="skill-num">04</span><h3>Contract Lifecycle Management</h3><p>Drafting, reviewing and updating contracts through Sirion and Symfact, including compliance, change orders and close-out.</p></div>
+    <div class="skill"><span class="skill-num">05</span><h3>Inventory & Ministore Operations</h3><p>SAP-based order processing, physical picking, QC checks and internal issuance with 99% accuracy and &lt;0.5% returns.</p></div>
+    <div class="skill"><span class="skill-num">06</span><h3>Logistics Planning</h3><p>Customs clearance, warehouse put-away, last-mile delivery and OTIF tracking with 3PLs across Kenya and East Africa.</p></div>
+    <div class="skill"><span class="skill-num">07</span><h3>Audit & Compliance</h3><p>Well-documented procurement and logistics records, internal audits, contract compliance reviews and gap resolution.</p></div>
+    <div class="skill"><span class="skill-num">08</span><h3>Occupational Safety Leadership</h3><p>OSH Champion responsible for PPE enforcement, toolbox talks and the departmental Safety Reset Programme.</p></div>
+    <div class="skill"><span class="skill-num">09</span><h3>Data Analytics & Reporting</h3><p>Excel dashboards using PivotTables, Power Query and VBA, plus Power BI and PowerPoint visualisation.</p></div>
+    <div class="skill"><span class="skill-num">10</span><h3>Ethical Procurement Practice</h3><p>Strict adherence to procurement ethics, compliance procedures and rejection of conflicts of interest or malpractice.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="section" id="impact">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">02 / Impact</div><h2>Numbers that<br>tell the story.</h2></div><p class="lead">Selected outcomes from procurement, logistics, inventory, reporting and sustainability work.</p></div>
+  <div class="metrics">
+   <div class="metric reveal"><strong>99%</strong><span>Order accuracy</span><p>Safaricom ministore operations.</p></div>
+   <div class="metric reveal"><strong>98%</strong><span>OTIF delivery</span><p>Full-cycle logistics for network rollouts.</p></div>
+   <div class="metric reveal"><strong>KES 1B+</strong><span>Inventory reconciled</span><p>EABL stock take without audit variances.</p></div>
+   <div class="metric reveal"><strong>&lt;0.5%</strong><span>Returns</span><p>Safaricom ministore performance.</p></div>
+   <div class="metric reveal"><strong>30%</strong><span>Faster retrieval</span><p>SharePoint procurement-file digitization at JKUAT.</p></div>
+   <div class="metric reveal"><strong>25%</strong><span>Download growth</span><p>Payless App campaigns across four faculties.</p></div>
+   <div class="metric reveal"><strong>97%</strong><span>Reconciliation accuracy</span><p>High-value JKUAT stock audit.</p></div>
+   <div class="metric reveal"><strong>200+</strong><span>Customers daily</span><p>TotalEnergies frontline service.</p></div>
+   <div class="metric reveal"><strong>500+</strong><span>Trees planted</span><p>Green Campus Caravan environmental initiative.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="experience">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">03 / Experience</div><h2>The journey so far.</h2></div><p class="lead">A detailed record of Graham's procurement, contract management, supplier performance, logistics, customer service and leadership experience.</p></div>
+  <div class="timeline">
+
+   <article class="job reveal">
+    <div class="job-top"><div><h3>Supply Chain Analyst</h3><div class="job-company">Safaricom PLC</div></div><div class="date">OCT 2025 — PRESENT</div></div>
+    <div class="role-summary">Contract lifecycle, supplier performance, compliance, analytics, cost optimization and stakeholder management.</div>
+    <ul>
+     <li><strong>Contract Lifecycle Management:</strong> Leads end-to-end contract lifecycle processes including drafting, evaluation, negotiation support, approval coordination and repository management to ensure compliance with Safaricom's internal governance and regulatory requirements.</li>
+     <li><strong>Supplier Performance Monitoring & Evaluation:</strong> Develops and executes supplier performance frameworks, KPIs and scorecards to track service delivery, contract adherence, SLA compliance and risk exposure, enabling data-driven supplier performance decisions.</li>
+     <li><strong>Compliance & Risk Oversight:</strong> Conducts periodic compliance checks on vendor activities, ensuring alignment with contractual obligations, procurement policies, audit standards and regulatory requirements while mitigating operational and contractual risks.</li>
+     <li><strong>Data Analytics & Reporting:</strong> Analyses procurement and supplier performance data using dashboards and analytical tools; produces monthly and quarterly reports that support leadership decision-making and continuous improvement.</li>
+     <li><strong>Cost Optimization & Value Assurance:</strong> Identifies cost-saving opportunities through contract-efficiency reviews, pricing analysis and vendor optimization strategies, supporting value for money and stronger commercial outcomes.</li>
+     <li><strong>Stakeholder Engagement & Issue Resolution:</strong> Acts as the liaison between internal business units and suppliers; facilitates issue escalation, dispute resolution, SLA reviews and corrective-action planning to ensure smooth operational delivery.</li>
+     <li><strong>Governance & Process Improvement:</strong> Supports strengthening procurement and contract-governance processes by enforcing policy guidelines, participating in internal audits and recommending improvements to enhance operational efficiency and compliance.</li>
+     <li><strong>Vendor Relationship Management:</strong> Maintains strong professional relationships with strategic suppliers, facilitating quarterly business reviews (QBRs), performance evaluations and collaboration to enhance service quality, innovation and operational alignment.</li>
+    </ul>
+    <div class="internal-note">Safaricom Internal · C2</div>
+   </article>
+
+   <article class="job reveal">
+    <div class="job-top"><div><h3>Supply Chain Analyst — Internship</h3><div class="job-company">Safaricom PLC</div></div><div class="date">MAY 2025 — OCT 2025</div></div>
+    <ul>
+     <li>Spearheaded sourcing activities by developing EOI documentation, supporting RFP evaluation and leading vendor pipeline tracking to ensure inclusive participation.</li>
+     <li>Worked across stakeholder groups including legal, technology and procurement to expedite contracts through Sirion/Symfact.</li>
+     <li>Managed procurement systems including Oracle and SAP to issue POs, follow up deliveries and reconcile transactions for network rollouts.</li>
+     <li>Oversaw full-cycle logistics covering inbound receipt, customs clearance, storage and outbound dispatch, achieving 98% OTIF delivery.</li>
+     <li>Performed contract compliance reviews and supported quarterly contract audits across 4 business units.</li>
+     <li>Enforced safety through the departmental Safety Reset Programme, PPE enforcement and risk assessments as OSH Champion.</li>
+     <li>Worked at the Safaricom ministore, handling SAP-based order processing, accurate picking and internal-customer service with a high service ethic and professional demeanor.</li>
+     <li>Created interactive dashboards and executive reports to communicate spend, delivery performance and compliance.</li>
+     <li>Maintained 99% order accuracy and &lt;0.5% returns in ministore operations, instrumental in supporting uninterrupted network deployment.</li>
+    </ul>
+   </article>
+
+   <article class="job reveal">
+    <div class="job-top"><div><h3>Logistics Assistant — Stores Department</h3><div class="job-company">East African Breweries Ltd (EABL)</div></div><div class="date">OCT — DEC 2024</div></div>
+    <ul>
+     <li>Coordinated daily warehouse activities for inbound raw materials and outbound finished goods.</li>
+     <li>Ensured system updates in SAP and documented shipments to Rwanda, supporting international and local logistics.</li>
+     <li>Maintained 100% safety compliance by adhering to HSE protocols during warehouse operations.</li>
+     <li>Improved picker efficiency by redesigning storage layout using Lean 5S principles.</li>
+     <li>Developed dashboards for OTIF tracking and implemented a freight-rate matrix that lowered logistics costs.</li>
+    </ul>
+   </article>
+
+   <article class="job reveal">
+    <div class="job-top"><div><h3>Campus Brand Ambassador — Part-Time</h3><div class="job-company">Payless App</div></div><div class="date">MAY — JUN 2024</div></div>
+    <ul>
+     <li>Coordinated campaigns across four faculties, increasing app downloads by 25%.</li>
+     <li>Developed digital marketing content and executed promotional events with 85% satisfaction ratings.</li>
+    </ul>
+   </article>
+
+   <article class="job reveal">
+    <div class="job-top"><div><h3>Customer Service Attendant</h3><div class="job-company">TotalEnergies</div></div><div class="date">DEC 2023 — JAN 2024</div></div>
+    <ul>
+     <li>Served over 200 customers daily with a focus on accuracy, friendliness and satisfaction.</li>
+     <li>Promoted upselling of lubricants and car-care products, enhancing station revenue.</li>
+     <li>Conducted real-time calibration, fuel quality checks and ensured accurate wet-stock reconciliations.</li>
+     <li>Maintained full cash integrity and participated in daily safety audits with zero incident reports.</li>
+    </ul>
+   </article>
+
+   <article class="job reveal">
+    <div class="job-top"><div><h3>Procurement Attaché</h3><div class="job-company">Jomo Kenyatta University of Agriculture & Technology (JKUAT)</div></div><div class="date">SEP — NOV 2023</div></div>
+    <ul>
+     <li>Supported tendering processes in line with PPRA, including bid openings, evaluations and supplier communications.</li>
+     <li>Participated in a high-value stock audit and achieved 97% reconciliation accuracy.</li>
+     <li>Digitized procurement files using SharePoint, improving file retrieval time by 30%.</li>
+     <li>Initiated a green procurement pilot by sourcing recycled paper and promoting eco-friendly practices.</li>
+    </ul>
+   </article>
+
+   <div class="section-head reveal" style="margin:65px 0 28px"><div><div class="kicker">Leadership & Achievements</div><h3 style="font-family:Manrope;font-size:28px">Impact beyond job titles</h3></div></div>
+
+   <article class="job reveal"><div class="job-top"><div><h3>Contract Compliance Audit Participant</h3><div class="job-company">Safaricom PLC</div></div><div class="date">AUDIT</div></div><ul><li>Supported department-wide audit reviews at Safaricom with zero non-compliance observations.</li></ul></article>
+   <article class="job reveal"><div class="job-top"><div><h3>OSH Safety Reset Programme Leader</h3><div class="job-company">Safaricom PLC</div></div><div class="date">SAFETY</div></div><ul><li>Drove culture change through enforced PPE compliance and awareness, contributing to zero lost-time incidents.</li></ul></article>
+   <article class="job reveal"><div class="job-top"><div><h3>Congress Leader</h3><div class="job-company">JKUAT Students’ Association</div></div><div class="date">LEADERSHIP</div></div><ul><li>Led campus legislative sessions, driving positive student-policy change.</li></ul></article>
+   <article class="job reveal"><div class="job-top"><div><h3>Stock Take Champion</h3><div class="job-company">East African Breweries Ltd (EABL)</div></div><div class="date">INVENTORY</div></div><ul><li>Reconciled KES 1B+ worth of inventory without audit variances.</li></ul></article>
+   <article class="job reveal"><div class="job-top"><div><h3>Logistics Cost Optimizer</h3><div class="job-company">Safaricom PLC & EABL</div></div><div class="date">COST</div></div><ul><li>Contributed to reduced transport costs at Safaricom and EABL.</li></ul></article>
+   <article class="job reveal"><div class="job-top"><div><h3>Environmental Advocate</h3><div class="job-company">Green Campus Caravan</div></div><div class="date">SUSTAINABILITY</div></div><ul><li>Led a 500+ tree planting drive under the Green Campus Caravan.</li></ul></article>
+  </div>
+ </div>
+</section>
+<section class="section" id="work">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">04 / Selected work</div><h2>Where capability<br>meets impact.</h2></div><p class="lead">A portfolio view of the problems, systems and initiatives I've contributed to.</p></div>
+  <div class="case-grid">
+   <article class="case reveal"><div><div class="case-tag">Safaricom · Supplier Performance</div><h3>From supplier data to performance decisions.</h3></div><p>Supplier KPIs, scorecards, SLA monitoring, risk exposure, QBRs and corrective action planning to improve service quality and operational alignment.</p></article>
+   <article class="case reveal"><div><div class="case-tag">Safaricom · Contract Governance</div><h3>Keeping contracts moving — and compliant.</h3></div><p>Lifecycle coordination, compliance checks, approval workflows, repository management, audits and governance improvements across business stakeholders.</p></article>
+   <article class="case reveal"><div><div class="case-tag">EABL · Logistics</div><h3>Lean thinking inside warehouse operations.</h3></div><p>Applied 5S principles to storage layout, built OTIF reporting and contributed to freight-cost optimization.</p></article>
+   <article class="case reveal"><div><div class="case-tag">JKUAT · Green Procurement</div><h3>Making procurement more sustainable.</h3></div><p>Initiated a green procurement pilot focused on recycled paper and environmentally conscious sourcing practices.</p></article>
+ </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">05 / Sustainability</div><h2>Value beyond<br>the balance sheet.</h2></div><p class="lead">Sustainability is part of the way I think about procurement, operations and community impact.</p></div>
+  <div class="sustain">
+   <div class="sustain-card reveal"><div class="kicker">Green Campus Caravan</div><h3>500+ trees.<br>One collective action.</h3><p>Led a tree planting drive as an environmental advocate, connecting sustainability with practical community action.</p><div class="big-tree">♧</div></div>
+   <div class="sustain-card reveal"><div class="kicker">Green Procurement</div><h3>Procurement<br>with purpose.</h3><p>Initiated a recycled-paper sourcing pilot at JKUAT, promoting eco-friendly procurement practices.</p><div class="big-tree">↗</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">06 / Leadership</div><h2>Beyond the job title.</h2></div><p class="lead">Leadership experiences spanning governance, safety, inventory discipline and environmental action.</p></div>
+  <div class="leadership">
+   <div class="lead-card reveal"><h3>Congress Leader</h3><p>JKUAT Students' Association — led campus legislative sessions and drove student-policy change.</p></div>
+   <div class="lead-card reveal"><h3>OSH Champion</h3><p>Drove the departmental Safety Reset Programme, PPE compliance and risk awareness.</p></div>
+   <div class="lead-card reveal"><h3>Stock Take Champion</h3><p>EABL — reconciled KES 1B+ inventory without audit variances.</p></div>
+   <div class="lead-card reveal"><h3>Environmental Advocate</h3><p>Led a 500+ tree planting drive through the Green Campus Caravan.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">07 / Education</div><h2>Foundation & tools.</h2></div></div>
+  <div class="education">
+   <div class="edu reveal"><small>2021 — 2024</small><h3>Bachelor of Science in Procurement, Contract Management & Supply Chain</h3><p>Jomo Kenyatta University of Agriculture & Technology (JKUAT)</p></div>
+   <div class="edu reveal"><small>JAN — FEB 2024</small><h3>Diploma in Digital Marketing</h3><p>Cambridge International Qualifications · Jan–Feb 2024 · First-Class Honors</p></div>
+  </div>
+  <div style="margin-top:45px" class="reveal"><div class="kicker">Tools & systems</div><div class="tools">
+   <span class="tool">SAP</span><span class="tool">Oracle</span><span class="tool">Sirion</span><span class="tool">Symfact</span><span class="tool">Excel</span><span class="tool">Power Query</span><span class="tool">VBA</span><span class="tool">Power BI</span><span class="tool">PowerPoint</span><span class="tool">SharePoint</span>
+  </div></div>
+ </div>
+</section>
+
+<section class="section" id="referees">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">08 / Referees</div><h2>Professional references.</h2></div><p class="lead">References listed exactly as provided in the current CV.</p></div>
+  <div class="referee-grid">
+   <article class="referee reveal"><h3>Venanzio Waweru</h3><div class="ref-role">Compliance Lead, Safaricom PLC</div><a href="tel:+254724608828">+254 724 608828</a></article>
+   <article class="referee reveal"><h3>Debora K. Mogeni</h3><div class="ref-role">Warehouse Controller, East African Maltings Ltd</div><a href="tel:+254722143438">+254 722 143438</a><a href="mailto:debora.mogeni@diageo.com">debora.mogeni@diageo.com</a></article>
+   <article class="referee reveal"><h3>Amwayi Kennedy</h3><div class="ref-role">Territory Manager, TotalEnergies Mbale</div><a href="tel:+254713026352">+254 713 026352</a><a href="mailto:amwayikennedy2@gmail.com">amwayikennedy2@gmail.com</a></article>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="container reveal">
+  <div class="kicker">08 / Contact</div>
+  <h2>Let's build<br><em style="color:var(--gold);font-style:normal">what's next.</em></h2>
+  <p>Open to conversations around procurement, supply chain, supplier performance, contract management, analytics and sustainability.</p>
+  <div class="actions" style="justify-content:center">
+   <a class="btn primary" href="mailto:grahamesonga1@gmail.com">grahamesonga1@gmail.com ↗</a>
+   <a class="btn secondary" href="tel:+254741272294">+254 741 272294</a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="container footer-inner"><span>© <span id="year"></span> Graham Esonga Eshiwani</span><span>Nairobi, Kenya · Procurement & Supply Chain</span></div>
+</footer>
+
+<button id="topBtn" aria-label="Back to top">↑</button>
+
+<script>
+
+const themeToggle=document.getElementById('themeToggle');
+const savedTheme=localStorage.getItem('graham-theme');
+if(savedTheme==='light') document.body.classList.add('light');
+function updateThemeButton(){
+  const light=document.body.classList.contains('light');
+  themeToggle.querySelector('.theme-icon').textContent=light?'☀':'☾';
+  themeToggle.querySelector('.theme-text').textContent=light?'Dark':'Light';
+}
+updateThemeButton();
+themeToggle.addEventListener('click',()=>{
+  document.body.classList.toggle('light');
+  localStorage.setItem('graham-theme',document.body.classList.contains('light')?'light':'dark');
+  updateThemeButton();
+});
+
+const nav=document.getElementById('nav'), topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>30);
+  topBtn.style.display=scrollY>500?'block':'none';
+});
+topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+document.getElementById('year').textContent=new Date().getFullYear();
+
+const menu=document.getElementById('menu');
+menu.addEventListener('click',()=>{
+ const links=document.querySelector('.navlinks');
+ links.style.display=links.style.display==='flex'?'none':'flex';
+ links.style.position='absolute';links.style.top='65px';links.style.right='15px';
+ links.style.flexDirection='column';links.style.padding='18px';links.style.background='#111';
+ links.style.border='1px solid var(--line)';links.style.borderRadius='16px';
+});
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+</script>
+</body>
+</html>
