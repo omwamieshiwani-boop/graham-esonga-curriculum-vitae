@@ -69,9 +69,7 @@ h1 em{font-style:normal;background:linear-gradient(135deg, var(--gold), var(--or
 .profile-card:hover{transform:rotate(0deg) translateY(-10px);border-color:rgba(255,107,53,.4)}
 
 .profile-art{height:480px;border-radius:22px;background:linear-gradient(160deg,#302d27,var(--soft));position:relative;overflow:hidden;display:flex;align-items:flex-end}
-.profile-art:before{content:"📊";position:absolute;font-size:300px;right:-40px;top:-60px;opacity:.1;animation:rotate 20s linear infinite}
-@keyframes rotate{from{transform:rotate(0deg)} to{transform:rotate(360deg)}}
-
+.profile-image{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:22px;filter:saturate(.95) contrast(1.1)}
 .profile-label{position:absolute;left:22px;top:22px;background:color-mix(in srgb, var(--black) 72%, transparent);backdrop-filter:blur(12px);padding:9px 13px;border-radius:100px;font-size:11px;color:var(--orange);border:1px solid rgba(255,107,53,.4);font-weight:600}
 .profile-bottom{position:absolute;bottom:22px;left:22px;right:22px;padding:20px;border-radius:20px;background:color-mix(in srgb, var(--black) 78%, transparent);backdrop-filter:blur(15px);border:1px solid var(--line)}
 .profile-bottom strong{display:block;font-family:Manrope;font-size:20px}.profile-bottom small{color:var(--muted)}
@@ -118,20 +116,21 @@ h2{font-family:Manrope;font-size:clamp(38px,5vw,65px);line-height:1;letter-spaci
 .job ul{margin-top:15px;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.8}.job li{margin:8px 0}
 
 .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.case{min-height:290px;border-radius:25px;border:1px solid var(--line);padding:28px;background:linear-gradient(140deg,#1b1b1b,#0f0f0f);display:flex;flex-direction:column;justify-content:space-between;transition:.35s;position:relative;overflow:hidden;cursor:pointer}
-.case:before{content:"";position:absolute;width:280px;height:280px;right:-120px;top:-120px;border-radius:50%;background:linear-gradient(135deg,rgba(255,107,53,.15),rgba(214,180,106,.08))}
+.case{min-height:290px;border-radius:25px;border:1px solid var(--line);padding:28px;background:linear-gradient(140deg,#1b1b1b,#0f0f0f);display:flex;flex-direction:column;justify-content:space-between;transition:.35s;position:relative;overflow:hidden;cursor:pointer;background-size:cover;background-position:center}
+.case:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.85),rgba(10,10,10,.7));z-index:1}
 .case:hover{transform:translateY(-10px);border-color:rgba(255,107,53,.5);box-shadow:0 25px 60px rgba(255,107,53,.2)}
-.case-tag{color:var(--orange);font-size:11px;text-transform:uppercase;letter-spacing:.15em;font-weight:800}
-.case h3{font-family:Manrope;font-size:27px;max-width:430px;position:relative;z-index:1}
-.case p{color:var(--muted);font-size:14px;max-width:500px;position:relative;z-index:1}
+.case-tag{color:var(--orange);font-size:11px;text-transform:uppercase;letter-spacing:.15em;font-weight:800;position:relative;z-index:2}
+.case h3{font-family:Manrope;font-size:27px;max-width:430px;position:relative;z-index:2}
+.case p{color:var(--muted);font-size:14px;max-width:500px;position:relative;z-index:2}
 
 .sustain{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.sustain-card{min-height:380px;border-radius:26px;border:1px solid var(--line);padding:35px;position:relative;overflow:hidden;background:linear-gradient(145deg,#1b1a17,#101010);transition:.3s;cursor:pointer}
-.sustain-card:first-child{background:linear-gradient(145deg,#182018,#0e110e)}
+.sustain-card{min-height:380px;border-radius:26px;border:1px solid var(--line);padding:35px;position:relative;overflow:hidden;background:linear-gradient(145deg,#1b1a17,#101010);transition:.3s;cursor:pointer;background-size:cover;background-position:center}
+.sustain-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.8),rgba(10,10,10,.7));z-index:1}
+.sustain-card:first-child:before{background:linear-gradient(135deg,rgba(24,32,24,.85),rgba(14,17,14,.8))}
 .sustain-card:hover{transform:translateY(-8px);border-color:rgba(255,107,53,.4)}
-.sustain-card h3{font-family:Manrope;font-size:38px;line-height:1;margin:20px 0}
-.sustain-card p{color:var(--muted);max-width:480px;line-height:1.8}
-.big-tree{position:absolute;right:-30px;bottom:-75px;font-size:220px;opacity:.08}
+.sustain-card h3{font-family:Manrope;font-size:38px;line-height:1;margin:20px 0;position:relative;z-index:2}
+.sustain-card p{color:var(--muted);max-width:480px;line-height:1.8;position:relative;z-index:2}
+.big-tree{position:absolute;right:-30px;bottom:-75px;font-size:220px;opacity:.08;z-index:0}
 
 .education{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .edu{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:20px;transition:.3s;cursor:pointer}
@@ -168,12 +167,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px
 .theme-toggle:hover{border-color:var(--orange);color:var(--orange)}
 .theme-icon{font-size:14px}
 
-.stat-counter{font-weight:800;color:var(--orange)}
-
 @keyframes slideInDown{from{opacity:0;transform:translateY(-30px)} to{opacity:1;transform:translateY(0)}}
 @keyframes slideInLeft{from{opacity:0;transform:translateX(-50px)} to{opacity:1;transform:translateX(0)}}
 @keyframes slideInUp{from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)}}
 @keyframes slideInRight{from{opacity:0;transform:translateX(50px)} to{opacity:1;transform:translateX(0)}}
+
+.img-placeholder{width:100%;height:100%;background:linear-gradient(135deg, #2a2a2a, #1a1a1a);display:flex;align-items:center;justify-content:center;color:#666;font-size:14px;text-align:center;padding:20px}
 
 @media(max-width:900px){
  .navlinks,.nav-cta{display:none}.theme-toggle{display:inline-flex;margin-left:auto;margin-right:8px}.menu{display:block}
@@ -215,20 +214,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px
   </div>
   <div class="profile-card reveal">
     <div class="profile-art">
-      <svg style="width:100%;height:100%;position:absolute" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#d6b46a;stop-opacity:0.2" />
-            <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:0.1" />
-          </linearGradient>
-        </defs>
-        <rect fill="url(#grad1)" width="400" height="480"/>
-        <circle cx="200" cy="150" r="60" fill="#ff6b35" opacity="0.15"/>
-        <circle cx="100" cy="300" r="40" fill="#d6b46a" opacity="0.1"/>
-        <circle cx="300" cy="350" r="50" fill="#ff6b35" opacity="0.1"/>
-        <path d="M 50 400 Q 200 350 350 400" stroke="#d6b46a" stroke-width="2" fill="none" opacity="0.2"/>
-        <text x="200" y="240" font-size="120" font-weight="800" text-anchor="middle" fill="#d6b46a" opacity="0.08" font-family="Manrope">G</text>
-      </svg>
+      <!-- Replace image paths with your own images -->
+      <img class="profile-image" src="./images/profile-hero.jpg" alt="Graham Esonga Eshiwani - Supply Chain Professional" onerror="this.style.display='none'">
       <div class="profile-label">NAIROBI · KENYA</div>
       <div class="profile-bottom"><strong>Graham Esonga</strong><small>Supply Chain Analyst · Procurement Professional</small></div>
     </div>
@@ -263,15 +250,15 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px
  <div class="container">
   <div class="section-head reveal"><div><div class="kicker">02 / Impact</div><h2>Numbers that<br>tell the story.</h2></div><p class="lead">Selected outcomes from procurement, logistics, inventory and reporting work.</p></div>
   <div class="metrics">
-   <div class="metric reveal"><strong class="stat-counter">99%</strong><span>Order accuracy</span><p>Safaricom ministore operations without compromise.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">98%</strong><span>OTIF delivery</span><p>Full-cycle logistics for network rollouts.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">KES 1B+</strong><span>Inventory reconciled</span><p>EABL stock take with zero variances.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">&lt;0.5%</strong><span>Returns rate</span><p>Best-in-class ministore performance.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">30%</strong><span>Faster retrieval</span><p>SharePoint digitization at JKUAT.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">97%</strong><span>Reconciliation accuracy</span><p>High-value JKUAT stock audit success.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">200+</strong><span>Daily customers</span><p>TotalEnergies frontline excellence.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">500+</strong><span>Trees planted</span><p>Green Campus Caravan impact.</p></div>
-   <div class="metric reveal"><strong class="stat-counter">100%</strong><span>Safety compliance</span><p>HSE protocols and zero incidents.</p></div>
+   <div class="metric reveal"><strong>99%</strong><span>Order accuracy</span><p>Safaricom ministore operations without compromise.</p></div>
+   <div class="metric reveal"><strong>98%</strong><span>OTIF delivery</span><p>Full-cycle logistics for network rollouts.</p></div>
+   <div class="metric reveal"><strong>KES 1B+</strong><span>Inventory reconciled</span><p>EABL stock take with zero variances.</p></div>
+   <div class="metric reveal"><strong>&lt;0.5%</strong><span>Returns rate</span><p>Best-in-class ministore performance.</p></div>
+   <div class="metric reveal"><strong>30%</strong><span>Faster retrieval</span><p>SharePoint digitization at JKUAT.</p></div>
+   <div class="metric reveal"><strong>97%</strong><span>Reconciliation accuracy</span><p>High-value JKUAT stock audit success.</p></div>
+   <div class="metric reveal"><strong>200+</strong><span>Daily customers</span><p>TotalEnergies frontline excellence.</p></div>
+   <div class="metric reveal"><strong>500+</strong><span>Trees planted</span><p>Green Campus Caravan impact.</p></div>
+   <div class="metric reveal"><strong>100%</strong><span>Safety compliance</span><p>HSE protocols and zero incidents.</p></div>
   </div>
  </div>
 </section>
@@ -346,10 +333,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px
  <div class="container">
   <div class="section-head reveal"><div><div class="kicker">04 / Selected work</div><h2>Where capability<br>meets impact.</h2></div><p class="lead">A portfolio view of the problems, systems and initiatives I've contributed to.</p></div>
   <div class="case-grid">
-   <article class="case reveal"><div><div class="case-tag">Safaricom · Supplier Performance</div><h3>From supplier data to performance decisions.</h3></div><p>Supplier KPIs, scorecards, SLA monitoring and corrective action planning to improve service quality.</p></article>
-   <article class="case reveal"><div><div class="case-tag">Safaricom · Contract Governance</div><h3>Keeping contracts moving — and compliant.</h3></div><p>Lifecycle coordination, compliance checks, approval workflows and governance improvements.</p></article>
-   <article class="case reveal"><div><div class="case-tag">EABL · Logistics</div><h3>Lean thinking inside warehouse operations.</h3></div><p>Applied 5S principles to storage layout, built OTIF reporting and contributed to cost optimization.</p></article>
-   <article class="case reveal"><div><div class="case-tag">JKUAT · Green Procurement</div><h3>Making procurement more sustainable.</h3></div><p>Initiated green procurement pilot focused on recycled materials and environmental practices.</p></article>
+   <article class="case reveal" style="background-image:url('./images/case-safaricom-supplier.jpg')"><div><div class="case-tag">Safaricom · Supplier Performance</div><h3>From supplier data to performance decisions.</h3></div><p>Supplier KPIs, scorecards, SLA monitoring and corrective action planning to improve service quality.</p></article>
+   <article class="case reveal" style="background-image:url('./images/case-safaricom-contract.jpg')"><div><div class="case-tag">Safaricom · Contract Governance</div><h3>Keeping contracts moving — and compliant.</h3></div><p>Lifecycle coordination, compliance checks, approval workflows and governance improvements.</p></article>
+   <article class="case reveal" style="background-image:url('./images/case-eabl-logistics.jpg')"><div><div class="case-tag">EABL · Logistics</div><h3>Lean thinking inside warehouse operations.</h3></div><p>Applied 5S principles to storage layout, built OTIF reporting and contributed to cost optimization.</p></article>
+   <article class="case reveal" style="background-image:url('./images/case-jkuat-green.jpg')"><div><div class="case-tag">JKUAT · Green Procurement</div><h3>Making procurement more sustainable.</h3></div><p>Initiated green procurement pilot focused on recycled materials and environmental practices.</p></article>
  </div>
  </div>
 </section>
@@ -358,8 +345,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px
  <div class="container">
   <div class="section-head reveal"><div><div class="kicker">05 / Sustainability</div><h2>Value beyond<br>the balance sheet.</h2></div><p class="lead">Sustainability is part of how I think about procurement and community impact.</p></div>
   <div class="sustain">
-   <div class="sustain-card reveal"><div class="kicker">Green Campus</div><h3>500+ trees.<br>One action.</h3><p>Led an environmental tree-planting drive, connecting sustainability with practical community action.</p><div class="big-tree">♧</div></div>
-   <div class="sustain-card reveal"><div class="kicker">Green Procurement</div><h3>Procurement<br>with purpose.</h3><p>Initiated recycled-paper sourcing pilot at JKUAT promoting eco-friendly practices.</p><div class="big-tree">↗</div></div>
+   <div class="sustain-card reveal" style="background-image:url('./images/sustain-trees.jpg')"><div class="kicker">Green Campus</div><h3>500+ trees.<br>One action.</h3><p>Led an environmental tree-planting drive, connecting sustainability with practical community action.</p><div class="big-tree">♧</div></div>
+   <div class="sustain-card reveal" style="background-image:url('./images/sustain-green.jpg')"><div class="kicker">Green Procurement</div><h3>Procurement<br>with purpose.</h3><p>Initiated recycled-paper sourcing pilot at JKUAT promoting eco-friendly practices.</p><div class="big-tree">↗</div></div>
   </div>
  </div>
 </section>
@@ -447,7 +434,6 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
